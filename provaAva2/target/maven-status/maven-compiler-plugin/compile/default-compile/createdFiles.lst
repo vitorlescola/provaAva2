@@ -1,0 +1,12 @@
+model\TipoUsuario.class
+controller\ProdutoController.class
+model\Pedido.class
+repository\UsuarioRepository.class
+model\Usuario.class
+controller\PedidoController.class
+model\Status.class
+repository\PedidoRepository.class
+com\provaAva2\provaAva2\ProvaAva2Application.class
+repository\ProdutoRepository.class
+controller\UsuarioController.class
+model\Produto.class
