@@ -21,7 +21,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
-	@GetMapping("/listarUsuarios")
+	@GetMapping("/listarUsuario")
 	public String listarUsuario(Model modelo) {
 		modelo.addAttribute("usuarios", usuarioRepository.findAll());
 		return "listarUsuario";
@@ -35,7 +35,7 @@ public class UsuarioController {
 			modelo.addAttribute("usuario", usuarioOpt.get());
 			return "formularioUsuario";
 		}else {
-			return "redirect:/usuarios/listarUsuarios";
+			return "redirect:/usuarios/listarUsuario";
 		}
 	}
 	
@@ -48,12 +48,12 @@ public class UsuarioController {
 	@PostMapping("/salvarUsuario")
 	public String salvarUsuario(@ModelAttribute Usuario usuario) {
 		usuarioRepository.save(usuario);
-		return "redirect:/usuarios/listarUsuarios";
+		return "redirect:/usuarios/listarUsuario";
 	}
 	
 	@GetMapping("/excluirUsuario/{id}")
 	public String excluirUsuario(@PathVariable("id") int id) {
 		usuarioRepository.deleteById(id);
-		return "redirect:/usuarios/listarUsuarios";
+		return "redirect:/usuarios/listarUsuario";
 	}
 }

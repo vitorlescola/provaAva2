@@ -21,25 +21,25 @@
         </tr>
       </thead>
       <tbody>
-        <tr th:each="produtos: ${produtos}">
-          <td th:text="${produtos.id}"></td>
-          <td th:text="${produtos.nome}" class="w-55"></td>
-          <td th:text="${produtos.estoque}" class="w-55"></td>
-          <td th:text="${produtos.preço}" class="w-55"></td>
-          <!--<td>
-            <a th:href="@{/produtos/editarProduto/{id} (id=${produto.id})}">
+        <tr th:each="produto : ${produtos}">
+          <td th:text="${produto.id}"></td>
+          <td th:text="${produto.nome}" class="w-55"></td>
+          <td th:text="${produto.estoque}" class="w-55"></td>
+          <td th:text="${produto.preço}" class="w-55"></td>
+          <td>
+            <a th:href="@{/produtos/editarProduto/{id}(id=${produto.id})}">
               <button type="button" class="btn btn-primary">Editar</button>
             </a>
-            <a th:href="@{/produtos/excluirProduto/{id} (id=${produto.id})}">
+            <a th:href="@{/produtos/excluirProduto/{id}(id=${produto.id})}">
               <button type="button" class="btn btn-danger">Excluir</button>
             </a>
-          </td>  -->
+          </td>
         </tr>
       </tbody>
     </table>
 
     <div class="text-end">
-      <a th:href="@{/produtos/formularioProdutos}">
+      <a th:href="@{/produtos/formularioProduto}">
         <button type="button" class="btn btn-secondary">Voltar</button>
       </a>
     </div>

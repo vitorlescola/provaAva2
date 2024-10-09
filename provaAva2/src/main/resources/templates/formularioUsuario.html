@@ -24,16 +24,16 @@
     <label for="telefone" class="form-label">Telefone</label>
       <input type="number" class="form-control" id="telefone" th:field="*{telefone}" >
   </div>
-   <div class="mb-3">
-    <label for="tipoUsuario" class="form-label">Tipo de usuario</label>
+  <div class="mb-3">
+    <label for="TipoUsuario" class="form-label">Tipo de usuario</label>
       <select id="tipoUsuario" th:field="*{tipoUsuario}" class="form-control">
-      <option th:each="tipoUsuario : ${T(com.provaAva2.model.tipoUsuario).values()}" th:value="${tipoUsuario}" th:text="${tipoUsuario}">
-      Tipo de usuario
+      <option th:each="tipoUsuarioEnum : ${T(com.sesi.provaAva2.model.TipoUsuario).values()}" th:value="${tipoUsuarioEnum}" th:text="${tipoUsuarioEnum}">
+      tipo de usuario
       </option>
       </select>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
-  <a th:href="@{/usuarios/listarUsuarios}">
+  <a th:href="@{/usuarios/listarUsuario}">
         <button type="button" class="btn btn-secondary">Ver Lista</button>
       </a>
 </form>
